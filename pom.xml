@@ -46,7 +46,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/StanislavMachel/pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:StanislavMachel/pet-clinic.git</developerConnection>
 	</scm>
 
 </project>
