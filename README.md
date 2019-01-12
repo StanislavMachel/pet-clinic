@@ -1,2 +1,2 @@
-# pet-clinic
-Pet clinic project from scratch
+# Pet Clinic
+Pet clinic project from scratch for learning Java Spring Framework
