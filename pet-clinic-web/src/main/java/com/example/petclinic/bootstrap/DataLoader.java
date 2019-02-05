@@ -50,17 +50,17 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("Loaded pet types...");
 
         Specialty radiology = new Specialty();
-        radiology.setDesctiption("Radiology");
+        radiology.setDescription("Radiology");
 
         Specialty savedRadiology = specialtyService.save(radiology);
 
         Specialty surgery = new Specialty();
-        surgery.setDesctiption("Surgery");
+        surgery.setDescription("Surgery");
 
         Specialty savedSurgery = specialtyService.save(surgery);
 
         Specialty dentistry = new Specialty();
-        dentistry.setDesctiption("Dentistry");
+        dentistry.setDescription("Dentistry");
 
         Specialty savedDentistry = specialtyService.save(dentistry);
 
@@ -76,7 +76,7 @@ public class DataLoader implements CommandLineRunner {
         Pet mikesPet = new Pet();
         mikesPet.setPetType(savedDogPetType);
         mikesPet.setOwner(owner1);
-        mikesPet.setBirthDay(LocalDate.now());
+        mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setName("Rosco");
         owner1.getPets().add(mikesPet);
 
@@ -92,7 +92,7 @@ public class DataLoader implements CommandLineRunner {
         Pet fionasCat = new Pet();
         fionasCat.setPetType(savedCatPetType);
         fionasCat.setOwner(owner2);
-        fionasCat.setBirthDay(LocalDate.now());
+        fionasCat.setBirthDate(LocalDate.now());
         fionasCat.setName("Lock");
         owner2.getPets().add(fionasCat);
 
