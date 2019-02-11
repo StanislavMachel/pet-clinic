@@ -5,11 +5,13 @@ import com.example.petclinic.model.Pet;
 import com.example.petclinic.services.OwnerService;
 import com.example.petclinic.services.PetService;
 import com.example.petclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService perTypeService;
@@ -33,9 +35,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                     if(pet.getPetType() != null){
                         if(pet.getPetType().getId() ==  null){
                             pet.setPetType(perTypeService.save(pet.getPetType()));
-                        }
-                        else {
-
                         }
                     }
                     else {
